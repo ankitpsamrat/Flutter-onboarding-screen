@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import '/pages/home_page.dart';
@@ -49,7 +51,7 @@ class OnBoardingPage extends StatelessWidget {
               decoration: getPageDecoration(),
             ),
           ],
-          done: Text(
+          done: const Text(
             'Read',
             style: TextStyle(
               fontWeight: FontWeight.w600,
@@ -57,9 +59,9 @@ class OnBoardingPage extends StatelessWidget {
           ),
           onDone: () => goToHome(context),
           showSkipButton: true,
-          skip: Text('Skip'),
+          skip: const Text('Skip'),
           onSkip: () => goToHome(context),
-          next: Icon(Icons.arrow_forward),
+          next: const Icon(Icons.arrow_forward),
           dotsDecorator: getDotDecoration(),
           onChange: (index) => print('Page $index selected'),
           globalBackgroundColor: Colors.white,
@@ -71,7 +73,7 @@ class OnBoardingPage extends StatelessWidget {
   }
 
   void goToHome(context) => Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => HomePage()),
+        MaterialPageRoute(builder: (_) => const HomePage()),
       );
 
   Widget buildImage(String path) => Center(
@@ -82,15 +84,15 @@ class OnBoardingPage extends StatelessWidget {
       );
 
   DotsDecorator getDotDecoration() => DotsDecorator(
-        color: Color(0xFFBDBDBD),
-        size: Size(10, 10),
-        activeSize: Size(22, 10),
+        color: const Color(0xFFBDBDBD),
+        size: const Size(10, 10),
+        activeSize: const Size(22, 10),
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
       );
 
-  PageDecoration getPageDecoration() => PageDecoration(
+  PageDecoration getPageDecoration() => const PageDecoration(
         titleTextStyle: TextStyle(
           fontSize: 28,
           fontWeight: FontWeight.bold,

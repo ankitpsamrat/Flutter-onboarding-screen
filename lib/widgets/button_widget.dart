@@ -18,14 +18,14 @@ class ButtonWidget extends StatelessWidget {
       child: RaisedButton(
         onPressed: onClicked,
         color: Theme.of(context).primaryColor,
-        shape: StadiumBorder(),
-        padding: EdgeInsets.symmetric(
+        shape: const StadiumBorder(),
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 16,
         ),
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 16,
           ),

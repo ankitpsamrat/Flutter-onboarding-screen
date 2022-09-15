@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '/main.dart';
 import '/pages/onboarding_page.dart';
 import '/widgets/button_widget.dart';
+import '/main.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,23 +10,21 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text(MyApp.title),
         elevation: 0,
-        title: Text(MyApp.title),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'HomePage',
               style: TextStyle(
                 fontSize: 48,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(
-              height: 24,
-            ),
+            const SizedBox(height: 24),
             ButtonWidget(
               text: 'Go Back',
               onClicked: () => goToOnBoarding(context),
@@ -38,6 +36,6 @@ class HomePage extends StatelessWidget {
   }
 
   void goToOnBoarding(context) => Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => OnBoardingPage()),
+        MaterialPageRoute(builder: (_) => const OnBoardingPage()),
       );
 }
