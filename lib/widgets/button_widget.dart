@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
@@ -15,13 +13,15 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: RaisedButton(
+      child: ElevatedButton(
         onPressed: onClicked,
-        color: Theme.of(context).primaryColor,
-        shape: const StadiumBorder(),
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20,
-          vertical: 16,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Theme.of(context).primaryColor,
+          shape: const StadiumBorder(),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 16,
+          ),
         ),
         child: Text(
           text,

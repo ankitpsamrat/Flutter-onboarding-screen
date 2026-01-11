@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import '/pages/home_page.dart';
@@ -63,7 +61,7 @@ class OnBoardingPage extends StatelessWidget {
           onSkip: () => goToHome(context),
           next: const Icon(Icons.arrow_forward),
           dotsDecorator: getDotDecoration(),
-          onChange: (index) => print('Page $index selected'),
+          onChange: (index) => debugPrint('Page $index selected'),
           globalBackgroundColor: Colors.white,
           dotsFlex: 0,
           nextFlex: 0,
